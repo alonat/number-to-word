@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": false,
+    "target": "ES2019",
+    "module": "ESNext",
+    "sourceMap": true,
+    "strict": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noEmitOnError": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noErrorTruncation": true,
+    "pretty": true,
+    "resolveJsonModule": true,
+    "noResolve": false,
+    "incremental": true,
+    "skipLibCheck": true,
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "baseUrl": "./src/client",
+    "tsBuildInfoFile": "./public/.tsbuildinfo",
+    "jsx": "preserve",
+    "keyofStringsOnly": true,
+    "lib": ["es2017", "dom"],
+    "typeRoots": ["node_modules/@types"],
+  },
+  "include": [
+    "./src/client/**/*.ts",
+    "./src/client/**/*.tsx"
+  ],
+  "exclude": ["node_modules", "public"],
+  "rootDirs": "./src/app"
+}

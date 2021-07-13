@@ -1,0 +1,71 @@
+{
+  "name": "number-to-word",
+  "version": "1.0.0",
+  "description": "Simple Register form",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src/client --ext .ts,.tsx",
+    "lint:fix": "yarn run lint --fix",
+    "stylelint": "stylelint ./src/client/assets/*.scss",
+    "stylelint:fix": "stylelint ./src/client/assets/*.scss --fix",
+    "build": "rollup -c",
+    "start": "rollup -c -w NODE_ENV=development",
+    "test": "-"
+  },
+  "pre-commit": [
+    "lint:fix",
+    "stylelint:fix"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alonat/number-to-word.git"
+  },
+  "author": "Alona Khaniukova",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alonat/number-to-word/issues"
+  },
+  "homepage": "https://github.com/alonat/number-to-word",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-react-jsx": "^7.12.12",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/preset-typescript": "^7.14.5",
+    "@rollup/plugin-babel": "^5.2.2",
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.1",
+    "@rollup/plugin-typescript": "^8.2.1",
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
+    "cssnano": "^4.1.10",
+    "eslint": "^7.16.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "node-sass": "^6.0.1",
+    "postcss": "^8.2.1",
+    "pre-commit": "^1.2.2",
+    "rollup": "^2.53.1",
+    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-serve": "^1.1.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-declaration-strict-value": "^1.7.12",
+    "stylelint-scss": "^3.19.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "core-js": "3",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}

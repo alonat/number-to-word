@@ -1,0 +1,58 @@
+:root {
+  // Fonts
+  --fontFamilyBase: 'Roboto', Arial, sans-serif;
+
+  --textBase: 400 14px/1.5 var(--fontFamilyBase);
+  --textBaseMobile: 400 16px/1.5 var(--fontFamilyBase);
+
+  --primary: #3801b3;
+  --primaryDisabled: #4314AE;
+  --primaryHovered: #6202ee;
+  --error: #e15554;
+
+  // Font colors
+  --fontColorPrimary: #444;
+  --fontColorAccent: #323232;
+  --fontColorSecondary: #959595;
+  --fontColorInverted: #fff;
+
+  --outlineColor: var(--primary);
+
+  --mainBG: #fff;
+  --mainBgDisabled: #f5f5f5;
+
+  --shadowDefault: 0 0 0 2px #d4d4d4;
+
+  // Borders
+  --borderPrimary: #aaaaaa;
+  --borderAccent: #808080;
+  --borderDisabled: #d4d4d4;
+  --borderError: var(--error);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #512ea0;
+    --primaryDisabled: #443469;
+    --primaryHovered: #4d318d;
+
+    --error: #d06679;
+
+    --outlineColor: var(--primary);
+
+    // Font colors
+    --fontColorPrimary: #b7b6b6;
+    --fontColorAccent: #d2d2d2;
+    --fontColorSecondary: #8a8a8a;
+
+    --mainBG: #262626;
+    --mainBgDisabled: #292929;
+
+    --shadowDefault: 0 0 0 2px #d4d4d4;
+
+    // Borders
+    --borderPrimary: #5d5d5d;
+    --borderAccent: #808080;
+    --borderDisabled: #535353;
+  }
+}

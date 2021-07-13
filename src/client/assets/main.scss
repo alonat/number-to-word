@@ -1,0 +1,7 @@
+@import 'helpers/mixins';
+@import 'helpers/variables';
+
+body {
+  @include reset();
+  background: var(--mainBG);
+}
