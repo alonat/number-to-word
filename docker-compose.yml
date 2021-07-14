@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  server:
+    image: number_to_words_server:latest
+    build: src/server
+    ports:
+      - "3002:3002"
+  mysql:
+    image: mariadb:10.6.3
+    ports:
+      - "3308:3306/tcp"
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "true"
+      MYSQL_USER: alonat
+      MYSQL_PASSWORD: secret
+      MYSQL_DATABASE: words

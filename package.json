@@ -8,6 +8,9 @@
     "lint:fix": "yarn run lint --fix",
     "stylelint": "stylelint ./src/client/assets/*.scss",
     "stylelint:fix": "stylelint ./src/client/assets/*.scss --fix",
+    "server:up": "docker-compose up --build",
+    "server:stop": "docker-compose down",
+    "server:restart": "yarn run server:stop && yarn run server:up",
     "build": "rollup -c",
     "start": "rollup -c -w NODE_ENV=development",
     "test": "-"
