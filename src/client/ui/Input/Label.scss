@@ -1,0 +1,10 @@
+@import "../../assets/helpers/mixins";
+
+.label {
+  @include formReset();
+
+  display: inline-flex;
+  align-items: center;
+  color: var(--fontColorAccent);
+  margin-bottom: 8px;
+}

@@ -1,0 +1,37 @@
+.pill {
+  text-align: center;
+  padding: 5px 15px;
+  border-radius: 15px;
+  color: var(--fontColorInverted);
+  font: var(--textBase);
+  background: #000;
+  opacity: .9;
+}
+
+.green {
+  background: var(--green-pill);
+}
+
+.red {
+  background: var(--red-pill);
+}
+
+.teal {
+  background: var(--teal-pill);
+}
+
+.violet {
+  background: var(--violet-pill);
+}
+
+.blue {
+  background: var(--blue-pill);
+}
+
+.orange {
+  background: var(--orange-pill)
+}
+
+.pink {
+  background: var(--pink-pill)
+}

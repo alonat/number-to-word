@@ -28,6 +28,16 @@
   --borderAccent: #808080;
   --borderDisabled: #d4d4d4;
   --borderError: var(--error);
+
+
+  //Pills color
+  --orange-pill: #e0ae5b;
+  --green-pill: #509883;
+  --red-pill: #a45555;
+  --teal-pill: #5092a4;
+  --violet-pill: #855cc1;
+  --blue-pill: #526ba0;
+  --pink-pill: #a358ac;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -54,5 +64,14 @@
     --borderPrimary: #5d5d5d;
     --borderAccent: #808080;
     --borderDisabled: #535353;
+
+    //Pills color
+    --orange-pill: #c3903c;
+    --green-pill: #356859;
+    --red-pill: #683535;
+    --teal-pill: #355c68;
+    --violet-pill: #493568;
+    --blue-pill: #354668;
+    --pink-pill: #633568;
   }
 }

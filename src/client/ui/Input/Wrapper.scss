@@ -1,0 +1,15 @@
+.fieldWrapper {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+
+.errorText {
+  color: var(--error);
+  font-size: 12px;
+  margin: 0;
+  font-family: var(--fontFamilyBase);
+  position: absolute;
+}

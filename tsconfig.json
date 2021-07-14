@@ -25,7 +25,7 @@
     "jsx": "preserve",
     "keyofStringsOnly": true,
     "lib": ["es2017", "dom"],
-    "typeRoots": ["node_modules/@types"],
+    "typeRoots": ["node_modules/@types", "custom_typings"],
   },
   "include": [
     "./src/client/**/*.ts",

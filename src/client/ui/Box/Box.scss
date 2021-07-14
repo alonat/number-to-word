@@ -1,0 +1,29 @@
+@import "../../assets/helpers/mixins";
+@import "../../assets/helpers/variables";
+
+.box {
+  width: 100%;
+  max-width: 456px;
+  min-width: 280px;
+  height: 80%;
+  max-height: 608px;
+  padding: 40px 40px 48px;
+  margin: auto;
+  border: 1px solid var(--borderAccent);
+  border-radius: 4px;
+
+  @media screen and (max-width: 640px) {
+    padding: 20px 20px 28px;
+  }
+}
+
+.boxWrapper {
+  @include reset();
+
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

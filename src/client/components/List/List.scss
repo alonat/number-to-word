@@ -1,0 +1,25 @@
+.listTitle {
+  font: var(--textBase);
+  color: var(--fontColorAccent);
+}
+
+.listWrapper {
+  padding: 0;
+  margin: -6px;
+  max-height: 400px;
+  overflow-y: auto;
+  display: flex;
+  justify-content: stretch;
+  flex-wrap: wrap;
+}
+
+.listItem {
+  list-style: none;
+  flex: 1 1 auto;
+  margin: 5px;
+  display: inline-flex;
+
+  > span {
+    width: 100%;
+  }
+}
