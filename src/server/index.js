@@ -1,25 +1,21 @@
 const express = require('express');
-const fs = require('fs')
-const path = require('path')
+const cors = require('cors');
+
+const { errorHandler } = require('./utils');
+const { createConnection } = require('./utils/db');
+
 const app = express();
 
-app.get('/', (req, res) => {
-  const mysql = require('mysql');
-  const connection = mysql.createConnection({
-    host: 'mysql',
-    user: 'alonat',
-    password: 'secret',
-    database: 'words'
-  });
+app.use(cors())
 
-  connection.query('CREATE TABLE IF NOT EXISTS words (word VARCHAR(64) NOT NULL, hash VARCHAR(64) NOT NULL)', function (error) {
-    if (error) throw error;
-  });
+app.get('/search', (req, res) => {
+  const { hash } = req.query;
+  const connection = createConnection();
 
-  const data = fs.readFileSync(path.join('', './data/words_list.txt'))
-
-  connection.end();
-  res.send(data);
+  connection.query('SELECT id, word FROM words WHERE hash = ?', [hash], (err, results) => {
+    errorHandler(err);
+    res.send(JSON.stringify(results));
+  })
 });
 
 app.listen(3002, () => {

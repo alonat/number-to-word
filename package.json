@@ -4,10 +4,11 @@
   "description": "Simple Register form",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint src/client --ext .ts,.tsx",
+    "lint": "eslint src/client --ext .ts,.tsx,.js",
     "lint:fix": "yarn run lint --fix",
     "stylelint": "stylelint ./src/client/assets/*.scss",
     "stylelint:fix": "stylelint ./src/client/assets/*.scss --fix",
+    "database:init": "docker-compose run server node seed.js",
     "server:up": "docker-compose up --build",
     "server:stop": "docker-compose down",
     "server:restart": "yarn run server:stop && yarn run server:up",

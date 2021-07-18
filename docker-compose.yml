@@ -6,12 +6,20 @@ services:
     build: src/server
     ports:
       - "3002:3002"
+    depends_on:
+      - mysql
   mysql:
     image: mariadb:10.6.3
     ports:
       - "3308:3306/tcp"
+    volumes:
+      - storage:/var/lib/mysql
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "true"
       MYSQL_USER: alonat
       MYSQL_PASSWORD: secret
       MYSQL_DATABASE: words
+
+volumes:
+  storage:
+    driver: local
