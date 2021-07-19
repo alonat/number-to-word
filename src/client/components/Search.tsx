@@ -5,7 +5,7 @@ import ListComponent from './List';
 
 import AppContext from '../provider';
 import { getWordsListByHash } from '../api';
-import { useThrottledEffect } from '../utils';
+import { useThrottledEffect } from '../effects';
 import Loader from '../ui/Loader';
 
 export default () => {

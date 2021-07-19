@@ -28,6 +28,7 @@ const Field: React.FC<FieldProps> = ({
       className={`${style.input} ${isError ? style.input__error : ''}`}
       type={type}
       id={id}
+      data-testid={id}
       placeholder={placeholder}
       value={value}
       onChange={handleChange}

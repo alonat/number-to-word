@@ -3,6 +3,7 @@ import { useRef, useEffect } from 'react';
 export const useThrottledEffect = <R extends (...args: any[]) => any>
   (fn: R, delay: number, deps: ReadonlyArray<any>) => {
   const lastCall = useRef(Date.now());
+  const effectDeps = [delay, ...deps];
 
   useEffect(
     () => {
@@ -17,6 +18,6 @@ export const useThrottledEffect = <R extends (...args: any[]) => any>
         clearTimeout(handler);
       };
     },
-    [deps],
+    [effectDeps],
   );
 };

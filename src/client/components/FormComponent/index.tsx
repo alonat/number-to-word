@@ -10,7 +10,7 @@ const FormComponent: React.FC = () => {
   const { hash, setHash } = useContext(AppContext);
 
   return (
-    <form action="/" className={css.formComponent}>
+    <form action="/" className={css.formComponent} data-testid="form-component">
       <FieldWrapper>
         <InputLabel fieldId="query" text="What are you looking for?" />
         <Field
