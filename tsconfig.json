@@ -22,10 +22,11 @@
     "moduleResolution": "node",
     "baseUrl": "./src/client",
     "tsBuildInfoFile": "./public/.tsbuildinfo",
-    "jsx": "preserve",
+    "jsx": "react",
     "keyofStringsOnly": true,
-    "lib": ["es2017", "dom"],
+    "lib": ["esnext", "dom"],
     "typeRoots": ["node_modules/@types", "custom_typings"],
+    "esModuleInterop": true
   },
   "include": [
     "./src/client/**/*.ts",

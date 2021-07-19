@@ -1,0 +1,36 @@
+{
+  "rootDir": "./",
+  "testEnvironment": "jsdom",
+  "moduleFileExtensions": [
+    "js",
+    "tsx",
+    "ts"
+  ],
+  "modulePathIgnorePatterns": [
+    "node_modules"
+  ],
+  "preset": "ts-jest",
+  "transform": {
+    ".*\\.(ts(x))$": "<rootDir>/node_modules/ts-jest",
+    ".*\\.(js)$": "<rootDir>/node_modules/babel-jest"
+  },
+  "transformIgnorePatterns": [
+    "node_modules"
+  ],
+  "moduleNameMapper": {
+    ".*\\.(scss)$": "<rootDir>/src/client/__mock__/styleMock.ts"
+  },
+  "testPathIgnorePatterns": [
+    "<rootDir>/config/"
+  ],
+  "collectCoverage": false,
+  "collectCoverageFrom": [
+    "**/*.{ts,tsx}",
+    "**/*.{js}",
+    "!**/node_modules/**"
+  ],
+  "coverageReporters": [
+    "html",
+    "text-summary"
+  ]
+}
