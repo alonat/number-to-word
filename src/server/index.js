@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const cors = require('cors');
 
@@ -18,6 +19,6 @@ app.get('/search', (req, res) => {
   })
 });
 
-app.listen(3002, () => {
-  console.log('App listening on port 3002!');
+app.listen(process.env.API_PORT, () => {
+  console.log(`App listening on port ${process.env.API_PORT}!`);
 });

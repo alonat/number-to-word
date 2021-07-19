@@ -4,7 +4,7 @@ import { createFetchMock } from '../../__mock__/fetch';
 
 global.fetch = createFetchMock([]);
 
-const baseUrl = 'http://localhost:3002';
+const baseUrl = `${process.env.API_URL}:${process.env.API_PORT}`;
 
 describe('Api helpers', () => {
   const checkRequestMethodAndLink = (method: string, link: string) => {

@@ -3,3 +3,4 @@ public/*.js
 public/*.js.map
 public/.tsbuildinfo
 .rollup.cache
+.env

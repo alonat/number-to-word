@@ -1,10 +1,13 @@
+import dotenv from 'dotenv';
+dotenv.config()
 import { terser } from 'rollup-plugin-terser';
 import resolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import replace from 'rollup-plugin-replace';
 import typescript from '@rollup/plugin-typescript';
-import serve from 'rollup-plugin-serve'
+import serve from 'rollup-plugin-serve';
+import injectProcessEnv from 'rollup-plugin-inject-process-env';
 
 import postcss from 'rollup-plugin-postcss';
 import cssnano from 'cssnano';
@@ -64,6 +67,10 @@ export default {
       contentBase: 'public',
       port: 3001,
       open: true,
-    })
+    }),
+    injectProcessEnv({
+      API_URL: process.env.API_URL,
+      API_PORT: process.env.API_PORT,
+    }),
   ],
 };

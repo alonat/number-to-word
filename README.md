@@ -15,6 +15,13 @@ Before first run please exec this command:
 
 This command will install all dependencies, create database and insert all known words into it.
 
+### Preparation
+You need to create .env for front and back
+```bash
+  cp .env.example .env
+  cp src/server/.env.example src/server/.env
+```
+
 ### Development mode
 For running project into development mode please run this commands in different terminal windows
 ```bash

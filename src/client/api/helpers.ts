@@ -1,7 +1,7 @@
 type METHOD = 'GET' | 'POST' | 'PUT' | 'DELETE';
 type RequestData = { [key: string]: string };
 
-const baseUrl = 'http://localhost:3002';
+const baseUrl = `${process.env.API_URL}:${process.env.API_PORT}`;
 
 export const createRequest = (method: METHOD) => async (url: string, data?: RequestData) => {
   const response = await fetch(`${baseUrl}/${url}`, {
