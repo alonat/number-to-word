@@ -12,6 +12,7 @@
     "server:up": "docker-compose up --build",
     "server:stop": "docker-compose down",
     "server:restart": "yarn run server:stop && yarn run server:up",
+    "bootstrap": "yarn && cd ./src/server && yarn && cd ../../ && yarn run database:init",
     "build": "rollup -c",
     "start": "rollup -c -w NODE_ENV=development",
     "test": "-"
