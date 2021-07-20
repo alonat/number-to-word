@@ -2,5 +2,6 @@ node_modules
 public/*.js
 public/*.js.map
 public/.tsbuildinfo
+public/fonts
 .rollup.cache
 .env

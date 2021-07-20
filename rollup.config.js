@@ -8,6 +8,7 @@ import replace from 'rollup-plugin-replace';
 import typescript from '@rollup/plugin-typescript';
 import serve from 'rollup-plugin-serve';
 import injectProcessEnv from 'rollup-plugin-inject-process-env';
+import copy from 'rollup-plugin-copy';
 
 import postcss from 'rollup-plugin-postcss';
 import cssnano from 'cssnano';
@@ -58,6 +59,13 @@ export default {
       plugins: [
         cssnano(),
       ],
+    }),
+    copy({
+      targets: [
+        {
+          src: './src/client/assets/fonts', dest: 'public'
+        }
+      ]
     }),
     resolve({
       browser: true,

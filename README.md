@@ -3,6 +3,7 @@
 </div>
 
 A simple app that can numeric string convert into a list of corresponding words in the style of [T9](https://en.wikipedia.org/wiki/T9_(predictive_text)) or [Phonewords](https://en.wikipedia.org/wiki/Phoneword). For example, given input "23" the output should be: ad, ae, af, bd, be, bf, cd, ce, cf.
+UI works with your system preferences and uses dark or light scheme according to them.
 
 ---
 
